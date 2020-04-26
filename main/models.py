@@ -23,8 +23,28 @@ class Image(models.Model):
 
 	def __str__(self):
 		return str(self.image)
+	
+	def fix(self):
+		#http://www-users.york.ac.uk/~tas509/chapbooks/9943182670001381_08.jpg
+		try:
+			u = self.previewURL.replace("http:", "https:")
+			self.previewURL = u
+			print(u)
+			self.save()
+			#
+			parts = u.split("_")
+			part = parts[1]
+			num = int(part.split(".")[0])
+			print(num)
+			self.order = num
+			self.save()
+		except Exception as err:
+			print(err)
+
+
+
 	class Meta:
-		ordering = ('url',)
+		ordering = ['order',]
 
 
 class Chapbook(models.Model):
