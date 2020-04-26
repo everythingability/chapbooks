@@ -1,0 +1,37 @@
+/*default version*/
+@font-face {
+	font-family: 'Copperplate';
+	src: url('/static/fonts/CopperplateGothicBold.ttf')  format('truetype');
+}
+
+body{
+    background:#000;
+    font-size: 1.2rem;
+    font-weight: 300;
+    font-family: Copperplate, 'Times New Roman', Times, serif;
+}
+
+h1{
+    text-align: center;
+    color:#d3ded3;
+}
+p{
+    color:#d3ded3;
+}
+.card {
+    background:#000;
+    border:0px; 
+    text-align:center;
+}
+.card a{
+    color:#d3ded3;
+}
+
+.container{
+    background:#000;
+    margin-top:50px;
+
+}
+footer{
+    background:darkgray;
+}

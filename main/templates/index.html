@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+    {{banner.preamble|safe}}
+    {{banner.text|safe}}
+
+   
+       
+        <br>
+    
+
+
+
+
+    <div class="card flex-row flex-wrap">
+     {% for chapbook in chapbooks %}
+        <div class="card item level_{{chapbook.id}} level_all" style="width: 150px">
+        <img src="/uploads/{{chapbook.images.first.image}}" width="150"/>
+          <a href="/view/{{chapbook.id}}">{{chapbook.name}}</a>
+
+          <div class="card-body">
+          
+              <div class="card-text">
+
+            
+                {{chapbook.preamble|safe|striptags|truncatechars:82 }}
+    
+            
+               </div> <!-- end card text-->
+            </div><!-- end card body-->
+        </div><!-- end card -->
+        
+
+   {%endfor%}
+</div><!-- end card flex-row -->
+
+{% endblock %}

@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block title %}{{chapbook.name}}{%endblock%} 
+
+{% block content %}
+
+    {{banner.preamble|safe}}
+    {{banner.text|safe}}
+
+<h1>{{chapbook.name}} </h1>
+<p>{{chapbook.images.count}} images<br/>
+<i>{{chapbook.mmsid}}</i>
+</p>
+<br>
+    {% for image in chapbook.images.all %}
+       <a href="{{image.url}}" target="_blank" title="click to access super high quality version"><img src="{{image.previewURL}}"></a>
+        <br><br>
+    {%endfor%}
+
+{% endblock %}

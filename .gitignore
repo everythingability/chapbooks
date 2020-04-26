@@ -1,0 +1,11 @@
+*.log
+*.pot
+*.pyc
+*.ini
+local_settings.py
+
+# Editor backup files
+*~
+*#
+# MacOS index file
+.DS_Store
