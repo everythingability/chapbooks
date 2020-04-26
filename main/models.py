@@ -23,6 +23,8 @@ class Image(models.Model):
 
 	def __str__(self):
 		return str(self.image)
+	class Meta:
+		ordering = ('url',)
 
 
 class Chapbook(models.Model):
