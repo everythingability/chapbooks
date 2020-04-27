@@ -15,8 +15,8 @@
 
     <div class="card flex-row flex-wrap">
      {% for chapbook in chapbooks %}
-        <div class="card item level_{{chapbook.id}} level_all" style="width: 150px">
-        <img src="/uploads/{{chapbook.images.first.image}}" width="150"/>
+        <div class="card item level_{{chapbook.id}} level_all" style="width: 300px">
+        <img src="/uploads/{{chapbook.images.first.image}}" width="300"/>
           <a href="/view/{{chapbook.id}}">{{chapbook.name}}</a>
 
           <div class="card-body">
